@@ -6,9 +6,9 @@ public class Main {
         while (true) {
             System.out.println("Správa knihovny: \n1. Přidat knihu \n2. Půjčit knihu \n3. Vrátit knihu \n4. Zobrazit knihy \n5. Konec");
 
-            int choise = sc.nextInt();
+            int choice = sc.nextInt();
 
-            switch (choise) {
+            switch (choice) {
                 case 1 -> Manager.addBook();
                 case 2 -> Manager.borrowBook();
                 case 3 -> Manager.returnBook();
