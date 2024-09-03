@@ -44,5 +44,4 @@ public class Manager {
         System.exit(0);
         sc.nextLine();
     }
-
 }
