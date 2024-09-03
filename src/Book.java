@@ -30,7 +30,7 @@ public class Book {
     }
 
     public void infoBook() {
-        System.out.println("Název: " + name + ", Autor: " + author + ", Rok vydání: " + release_year + ", Stav " + (lent ? "Půjčená" : "Dostupná"));
+        System.out.println("Název: " + name + ", Autor: " + author + ", Rok vydání: " + release_year + ", Stav: " + (lent ? "Půjčená" : "Dostupná"));
     }
 
     public String getName() {
