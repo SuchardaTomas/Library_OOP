@@ -24,7 +24,7 @@ public class Manager {
     public static void borrowBook() {
         System.out.println("Zadejte název knihy, kterou chete půjčit:");
         String name = sc.nextLine();
-        library.lentBook(name);
+        library.borrowBook(name);
         sc.nextLine();
     }
 
@@ -42,6 +42,5 @@ public class Manager {
 
     public static void quit() {
         System.exit(0);
-        sc.nextLine();
     }
 }
