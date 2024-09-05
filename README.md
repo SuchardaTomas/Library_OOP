@@ -14,7 +14,7 @@ spravovat sbírku knih – přidávat nové knihy, půjčovat je, vracet a zobra
 <h2>Struktura projektu</h2>
 <ul>
     <li><strong>Book.java:</strong> Reprezentuje knihu a obsahuje její atributy (název, autor, rok vydání a stav).</li>
-    <li><strong>Library.java:</strong> Spravuje seznam knih, nabízí metody pro půjčování, vracení a zobrazení knih.</li>
+    <li><strong>Library.java:</strong> Spravuje seznam knih, nabízí metody pro přidání, půjčování, vracení a zobrazení knih.</li>
     <li><strong>Manager.java:</strong> Zpracovává uživatelské vstupy a komunikuje s knihovnou.</li>
     <li><strong>Main.java:</strong> Hlavní třída programu, která zajišťuje běh aplikace a zobrazuje menu s volbami.</li>
 </ul>
