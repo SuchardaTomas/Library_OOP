@@ -1,7 +1,6 @@
 <h1>Systém pro správu knihovny</h1>
 
-<p>Tento projekt je ukázkou mé práce a zkušeností v jazyce Java. Jedná se o konzolovou aplikaci pro správu knihovny, 
-kterou jsem vytvořil jako součást své práce po dokončení střední školy se zaměřením na IT. Aplikace umožňuje uživateli 
+<p>Tento projekt je ukázkou mých zkušeností v OOP a zkušeností v jazyce Java. Aplikace umožňuje uživateli 
 spravovat sbírku knih – přidávat nové knihy, půjčovat je, vracet a zobrazovat jejich stav.</p>
 
 <h2>Funkce</h2>
