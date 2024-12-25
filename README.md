@@ -14,11 +14,12 @@
 <ul>
   <li><strong>Book.java</strong> Reprezentuje knihu a obsahuje její atributy (název, jméno autora, rok vydání a dostupnost).</li>
   <li><strong>BookService.java</strong>  Definuje základní operace pro správu knih, jako je půjčení a vrácení knihy.</li>
+  <li><strong>BookTest.java</strong> Testuje metody pro půjčení a vrácení knih v třídě <strong>Book</strong>.</li>
+  <br>
   <li><strong>Library.java</strong> Spravuje seznam knih, nabízí metody pro přidání půjčování, vracení a zobrazení knih.</li>
   <li><strong>LibraryService.java</strong> Poskytuje metody pro správu knihovny, jako je přidání nové knihy, půjčování a vracení knih podle názvu, nebo zobrazení všech knih v knihovně.</li>
+  <li><strong>LibraryTest.java</strong> Testuje metody pro přidávání knih, půjčování a vracení knih podle názvu v třídě <strong>Library</strong>.</li>
+  <br>
   <li><strong>Command.java</strong> Třída zajišťující komunikaci s uživatelem prostřednictvím konzole. Využívá metody definované v knihovní logice pro správu knih.</li>
   <li><strong>Main.java</strong> Hlavní třída programu, která zajišťuje běh aplikace a zobrazuje menu s volbami.</li>
-  <br>
-  <li><strong>BookTest.java</strong> Testuje metody pro půjčení a vrácení knih v třídě <strong>Book</strong>.</li>
-  <li><strong>LibraryTest.java</strong> Testuje metody pro přidávání knih, půjčování a vracení knih podle názvu v třídě <strong>Library</strong>.</li>
 </ul>
