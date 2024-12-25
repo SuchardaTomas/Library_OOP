@@ -1,6 +1,6 @@
 <h1>Systém pro správu knihovny</h1>
 
-<p>Tento projekt je ukázkou mých zkušeností v OOP a zkušenosti v jazyce Java. Aplikace umožňuje uživateli sprvoat sbírku knih - přidávat knihy, půjčovat je, vracet a zobrazovat jejich stav</p>
+<p>Tento projekt je ukázkou mých zkušeností v OOP a zkušenosti v jazyce Java. Aplikace umožňuje uživateli spravovat sbírku knih - přidávat knihy, půjčovat je, vracet a zobrazovat jejich stav</p>
 
 <h2>Funkce</h2>
 <ul>
