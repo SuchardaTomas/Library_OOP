@@ -44,7 +44,7 @@ public class Book implements BookService {
                 "title='" + title + '\'' +
                 ", author='" + author + '\'' +
                 ", releaseYear=" + releaseYear +
-                ", lent=" + lent +
+                ", lent=" + (lent ? "Půjčená" : "Dostupná") +
                 '}';
     }
 
@@ -70,11 +70,6 @@ public class Book implements BookService {
             System.out.printf("Kniha %s není půjčena\n", title);
             return false;
         }
-    }
-
-    @Override
-    public String infoBook() {
-        return String.format("Název: %s, Autor: %s, Rok vydání: %d, Stav: %s", title, author, releaseYear, lent ? "Půjčená" : "Dostupná");
     }
 }
 
