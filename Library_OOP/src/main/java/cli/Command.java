@@ -1,22 +1,24 @@
 package cli;
 
-import library.Book;
-import library.Library;
-
 import java.time.Year;
 import java.util.Scanner;
+
+import library.Book;
+import library.Library;
 
 public class Command implements Runnable{
     private static final Scanner sc = new Scanner(System.in);
     private final Library library;
+    private final String file = "C:\\Users\\tomas\\Desktop\\Library_OOP\\Library_OOP\\src\\main\\java\\library\\Knihy.csv";
 
     public Command() {
         library = new Library();
+        library.readRecords(file);
     }
 
     @Override
     public void run() {
-        System.out.println("Vítejte ve správně knihovny\n");
+        System.out.println("Vítejte ve správě knihovny\n");
         boolean run = true;
 
         do {
@@ -25,10 +27,10 @@ public class Command implements Runnable{
 
             try {
                 switch (line) {
-                    case 1 -> nactiKnihy();
-                    case 2 -> pridejNovouKnihu();
-                    case 3 -> vraceniKnihy();
-                    case 4 -> pujceniKnihy();
+                    case 1 -> showBooks();
+                    case 2 -> addNewBook();
+                    case 3 -> returnBook();
+                    case 4 -> borrowBook();
                     case 5 -> run = false;
                     default -> System.out.println("Chybný příkaz");
                 }
@@ -40,40 +42,39 @@ public class Command implements Runnable{
         sc.close();
     }
 
-    public void nactiKnihy() {
-
-        if (library.getBooks().size() == 0) {
+    public void showBooks() {
+        if (library.getBooks().isEmpty()) {
             System.out.println("V knihovně nejsou žádné knihy\n");
         } else {
             library.showAllBooks();
-            System.out.println();
         }
     }
 
-    public void pridejNovouKnihu() {
+    public void addNewBook() {
         sc.nextLine();
         System.out.println("Zadejte název knihy");
         String title = sc.nextLine();
-        System.out.println("Zadejte jméno autora");
+        System.out.println("\nZadejte jméno autora");
         String author = sc.nextLine();
-        System.out.println("Zadejte rok vydání");
+        System.out.println("\nZadejte rok vydání");
         Year year = Year.parse(sc.nextLine());
 
         Book newBook = new Book(title, author, year);
 
         library.addBook(newBook);
+        library.addRecords(file);
 
         System.out.println("Kniha byla úspěšně přidána\n");
     }
 
-    public void vraceniKnihy() {
+    public void returnBook() {
         sc.nextLine();
         System.out.println("Zadejte jméno knihy kterou chcete vrátit");
         String title = sc.nextLine();
         library.returnBookByName(title);
     }
 
-    public void pujceniKnihy() {
+    public void borrowBook() {
         sc.nextLine();
         System.out.println("Zadejte jméno knihy, kterou si chcete pujcit");
         String title = sc.nextLine();

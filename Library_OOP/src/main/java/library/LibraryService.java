@@ -5,4 +5,6 @@ public interface LibraryService {
     public void borrowBookByName(String title);
     public void returnBookByName(String title);
     public void showAllBooks();
+    public void readRecords(String file);
+    public void addRecords(String file);
 }
