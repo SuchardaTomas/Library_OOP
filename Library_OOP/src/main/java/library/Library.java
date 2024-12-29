@@ -76,4 +76,9 @@ public class Library implements LibraryService{
             throw new RuntimeException(e);
         }
     }
+
+    @Override
+    public void findBookByTitleOrAuthor(String query) {
+        books.stream().filter(b -> b.getTitle().equalsIgnoreCase(query) || b.getAuthor().equalsIgnoreCase(query)).forEach(b -> System.out.println(b));
+    }
 }

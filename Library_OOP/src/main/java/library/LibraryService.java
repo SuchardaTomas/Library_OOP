@@ -7,4 +7,5 @@ public interface LibraryService {
     public void showAllBooks();
     public void readRecords(String file);
     public void addRecords(String file);
+    public void findBookByTitleOrAuthor(String query);
 }

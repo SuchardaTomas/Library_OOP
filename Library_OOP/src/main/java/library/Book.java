@@ -40,12 +40,14 @@ public class Book implements BookService {
 
     @Override
     public String toString() {
-        return "Kniha{" +
-                "title='" + title + '\'' +
-                ", author='" + author + '\'' +
-                ", releaseYear=" + releaseYear +
-                ", lent=" + (lent ? "Půjčená" : "Dostupná") +
-                '}';
+        return new StringBuilder()
+                .append("Kniha{")
+                .append("tittle=").append(title)
+                .append(", author=").append(author)
+                .append(", releaseYear=").append(releaseYear)
+                .append(", lent=").append(lent ? "Půjčená" : "Dostupná")
+                .append("}")
+                .toString();
     }
 
     @Override
