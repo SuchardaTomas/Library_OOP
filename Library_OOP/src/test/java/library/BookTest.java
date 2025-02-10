@@ -1,5 +1,8 @@
 package library;
 
+import org.junit.jupiter.api.AfterAll;
+import org.junit.jupiter.api.AfterEach;
+import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
 import java.time.Year;
@@ -8,26 +11,42 @@ import static org.junit.jupiter.api.Assertions.*;
 
 class BookTest {
 
-    Book kniha1 = new Book("1984", "George Orwell", Year.of(1984));
-    Book kniha2 = new Book("1984", "George Orwell", Year.of(1984), true);
+    private Book kniha;
 
-    @Test
-    void borrowBook1() {
-        assertEquals(true, kniha1.borrowBook());
+    @BeforeEach
+    void setUp() {
+        kniha = new Book("1984", "George Orwell", Year.of(1984));
     }
 
     @Test
-    void borrowBook2() {
-        assertEquals(false, kniha2.borrowBook());
+    void shouldAllowBorrowingBookWhenAvailable() {
+        assertTrue(kniha.borrowBook());
     }
 
     @Test
-    void returnBook1() {
-        assertEquals(true, kniha2.returnBook());
+    void shouldNotAllowBorrowingBookIfAlreadyLent() {
+        kniha.borrowBook();
+        assertFalse(kniha.borrowBook());
     }
 
     @Test
-    void returnBook2() {
-        assertEquals(false, kniha1.returnBook());
+    void shouldAllowReturningBookWhenBorrowed() {
+        kniha.borrowBook();
+        assertTrue(kniha.returnBook());
+    }
+
+    @Test
+    void shouldNotAllowReturningBookIfNotBorrowed() {
+        assertFalse(kniha.returnBook());
+    }
+
+    @AfterEach
+    void tearDown() {
+        System.out.println("Test dokončen\n");
+    }
+
+    @AfterAll
+    static void cleanup() {
+        System.out.println("Všechny testy dokončeny.");
     }
 }
